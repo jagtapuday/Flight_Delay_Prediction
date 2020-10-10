@@ -5,7 +5,7 @@ import datetime
 import base64
 import Preprocessing
 import pickle
-
+#pipreqs path/to/project To add requirement.txt file
 PAGE_CONFIG = {"page_title": "Delay_prediction.io", "page_icon": ":smiley:", "layout": "centered"}
 st.beta_set_page_config(**PAGE_CONFIG)
 
@@ -82,11 +82,11 @@ def Prediction(Model,One_Flight, Source_Location, Destination_Location):
         st.subheader("Loading Prediction...")
     Predict_Input = Preprocessing.Preprocessing_df(One_Flight, Source_Location, Destination_Location)
     result = Model.predict([list(Predict_Input.values())])
-    result1 = Model.predict_proba([list(Predict_Input.values())])
+    result1 = Model.predict_proba([list(Predict_Input.values())])[0][1]
 
     st.header("Prediction : " + "The flight will not be a delay. "
-                 if result == 0 else "The flight will be a delay.")
-    st.header("Probability : %.2f" % (result1[0][0] * 100)+"%" if result == 0 else (result1[0][1] * 100)+"%")
+                 if result1 < 0.28  else "Prediction : " + "The flight will be a delay.")
+    st.header("Probability : %.2f" % ((1-result1) * 100)+"%" if result1 < 0.28 else  "Probability : %.2f" % (float(result1) * 100)+"%")
 def main(df_flights, df_airport,Model):
 
     st.title("Welcome To, Flight Delay Prediction")
@@ -116,11 +116,6 @@ def main(df_flights, df_airport,Model):
             Prediction(Model,One_Flight, Source_location, Destination_location)
     else:
         st.subheader("Please Select Location , Date and Flight...")
-
-
-
-
-
 
 if __name__ == '__main__':
     @st.cache(allow_output_mutation=True)
