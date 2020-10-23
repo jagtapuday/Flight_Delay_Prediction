@@ -1,6 +1,14 @@
 # Flight_Delay_Prediction
-Deployed
+
+## Deployed
+
 https://flight-delay-prediction-2018.herokuapp.com/
+
+## Home Page :
+![Screenshot from 2020-10-19 13-31-23](https://user-images.githubusercontent.com/63186019/97003770-95892d80-1559-11eb-9476-fcc104bdc431.png)
+
+## Project Flow :
+![Model presentation](https://user-images.githubusercontent.com/63186019/97003606-493ded80-1559-11eb-8200-11f3d0513692.png)
 
 
 **Requirement:**
@@ -12,6 +20,10 @@ https://flight-delay-prediction-2018.herokuapp.com/
 - scikit-learn>=0.23.2
 - LGBM
 - CatBoost
+
+## Feature Importance :
+![Feature_Importance](https://user-images.githubusercontent.com/63186019/97003692-6d99ca00-1559-11eb-82eb-01d491769b1f.png)
+
 
 
 ## Resuls of different algorithams:
