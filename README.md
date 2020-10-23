@@ -26,7 +26,7 @@ https://flight-delay-prediction-2018.herokuapp.com/
 
 
 
-## Resuls of different algorithams:
+## Results of different algorithms:
 
 ![Logistic_Result](https://user-images.githubusercontent.com/63186019/97002524-b8b2dd80-1557-11eb-8695-27f170c2ae69.png)
 ![Randam_Forest_Result](https://user-images.githubusercontent.com/63186019/97002562-c5cfcc80-1557-11eb-97df-6fe25c436e4c.png)
