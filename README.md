@@ -13,7 +13,7 @@ score was calculated to determine optimum number of trees. Sampling techniques (
 were then applied on data to improve the performance of model. Every model’s performance
 was compared using precision, recall, F1 score, Accuracy, Confusion matrix, and AUC under
 ROC.
-#### Keywords: Data Science, Data mining, Machine Learning, Delay Prediction, Weather, Imbalanced Training data, Sampling Techniques, Binary classificatio
+#### Keywords: Data Science, Data mining, Machine Learning, Delay Prediction, Weather, Imbalanced Training data, Sampling Techniques, Binary classification.
 
 
 
